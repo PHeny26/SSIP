@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
     <title>SSIP</title>
 </head>
 
@@ -14,12 +15,13 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form method="post" action="">
+                <div id="signUpMessage" class="messageDiv"  style="display:none;"></div>
                 <h1>Create Account</h1>
                 <br>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
+                <input type="text" id="Name" placeholder="Name" required>
+                <input type="email" id="Email" placeholder="Email" required>
+                <input type="password" id="Password" placeholder="Password" required>
                 <span><b>-------- Or --------</b></span>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -28,7 +30,8 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form method="post" action="">
+                <div id="signInMessage" class="messageDiv"  style="display:none;"></div>
                 <h1>Login</h1>
                 <br>
                 <input type="email" placeholder="Email" required>
